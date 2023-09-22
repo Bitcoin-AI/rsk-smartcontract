@@ -4,6 +4,7 @@ require('dotenv/config');
 require('@nomiclabs/hardhat-ethers');
 require('@nomiclabs/hardhat-waffle');
 
+
 const TESTNET_GAS_MULT = 1.1;
 
 const mnemonic = fs.readFileSync('.testnet.seed-phrase').toString().trim();
