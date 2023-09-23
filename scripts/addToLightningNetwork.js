@@ -9,11 +9,11 @@ async function main() {
     const contract = ContractFactory.attach(contractAddress);
   
     // Set up the parameters
-    const amount = ethers.utils.parseEther("0.01"); // Replace with your minimum amount in Ether
-    const invoiceId = ethers.utils.formatBytes32String("123abc2"); // Replace with whatever number or string works for you
+    const amount = 100; // Replace with your minimum amount in Ether
+    // const invoiceId = ethers.utils.formatBytes32String(""); // Replace with whatever number or string works for you
   
     // Send the transaction
-    const tx = await contract.swapToLightningNetwork(amount, invoiceId, { value: amount });
+    const tx = await contract.swapToLightningNetwork(amount, "0xe276ae8f54d89973d41292b5965823f3d9e1486c9d5b2f7a53ca420c49ce287d", { value: amount });
     console.log("Transaction sent:", tx.hash);
   
     // Wait for the transaction to be mined
