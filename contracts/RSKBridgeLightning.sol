@@ -11,12 +11,12 @@ contract RSKBridgeLightning is ReentrancyGuard{
     mapping(address => uint256) public userBalances;
 
     // Event to notify when funds are locked for Lightning Network
-    event SwapToLightningNetwork(address indexed user, uint256 amount, bytes32 invoiceId);
+    event SwapToLightningNetwork(address indexed user, uint256 amount, string invoiceId);
     // Event to notify when funds are unlocked from Lightning Network
     event SwapFromLightningNetwork(uint256 amount, address destination);
 
     // function called by user to transfer BTC to Lightning network
-    function swapToLightningNetwork(uint256 amount, bytes32 invoiceId) external payable {
+    function swapToLightningNetwork(uint256 amount, string calldata invoiceId) external payable {
         require(msg.value == amount, "Amount mismatch");
         require(amount > 0, "Amount should be greater than 0");
 
