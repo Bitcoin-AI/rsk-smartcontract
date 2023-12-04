@@ -1,4 +1,4 @@
-# rsk-smartcontract
+# rsk-smartcontract (deprecated, all code will be moved to the canister)
 
 
 Explorer
